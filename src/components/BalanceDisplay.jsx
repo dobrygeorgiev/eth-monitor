@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { ethers } from 'ethers';
 import { NEXO_CONTRACT, WETH_CONTRACT } from '../utils/contracts';
 import { TOKENS } from '../utils/tokens';
@@ -16,15 +16,8 @@ const BalanceDisplay = ({ provider, signer, account, network, ethBalance }) => {
   const [isWrapping, setIsWrapping] = useState(false);
   const [isSwapping, setIsSwapping] = useState(false);
 
-  useEffect(() => {
-    if (!provider || !account || !network) return;
 
-    fetchBalances();
-    const interval = setInterval(fetchBalances, 30000);
-    return () => clearInterval(interval);
-  }, [provider, account, network]);
-
-  const fetchBalances = async () => {
+  const fetchBalances = useCallback (async () => {
     try {
       // Get WETH Balance
       const wethAddress = WETH_CONTRACT[network.chainId];
@@ -57,7 +50,16 @@ const BalanceDisplay = ({ provider, signer, account, network, ethBalance }) => {
     } catch (error) {
       console.error('Error:', error);
     }
-  };
+  }, [provider, account, network]);
+
+
+  useEffect(() => {
+    if (!provider || !account || !network) return;
+
+    fetchBalances();
+    const interval = setInterval(fetchBalances, 30000);
+    return () => clearInterval(interval);
+  }, [provider, account, network, fetchBalances]);
 
   const wrapEth = async () => {
     if (!signer || !ethAmount || isWrapping) return;
