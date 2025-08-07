@@ -1,0 +1,154 @@
+.connection-panel {
+    background: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  .connection-panel.connected {
+    background: rgba(20, 20, 20, 0.9);
+  }
+  
+  .connection-content-connected {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .connection-content-disconnected {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .network-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+  }
+  
+  .status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  
+  .status-indicator.connected {
+    background: #00ff9d;
+    box-shadow: 0 0 10px #00ff9d;
+  }
+  
+  .status-indicator.disconnected {
+    background: #ff5555;
+    box-shadow: 0 0 10px #ff5555;
+  }
+  
+  .status-indicator.warning {
+    background: #ffcc00;
+    box-shadow: 0 0 10px #ffcc00;
+  }
+  
+  .network-name {
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .tooltip {
+    position: absolute;
+    background: rgba(255, 50, 50, 0.2);
+    color: #ff6b6b;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-left: 8px;
+    white-space: nowrap;
+  }
+  
+  .wallet-info {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: space-between !important;
+  }
+  
+  .wallet-address {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+  }
+  
+  .identicon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+  }
+  
+  .connect-button, .disconnect-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .connect-button {
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    height: 40px;
+  }
+  
+  .disconnect-button {
+    color: #ff4b4b;
+    border: 1px solid rgba(255, 75, 75, 0.3);
+    background-color: transparent;
+
+  }
+  .disconnect-button:hover {
+    background: rgba(255, 75, 75, 0.2);
+    box-shadow: 0 0 15px rgba(255, 75, 75, 0.3);
+  }
+  
+  .glow-on-hover:hover {
+    transform: translateY(-2%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .connect-button:hover {
+    box-shadow: 0 0 15px rgba(79, 172, 254, 0.5);
+  }
+  
+  .button-icon {
+    font-size: 18px;
+  }
+
+@media (max-width: 450px) {
+  .disconnect-button
+  {
+    max-width: 100px;
+    scale: 0.7;
+  }
+}
+@media (max-width: 400px) {
+  .disconnect-button
+  {
+    max-width: 100px;
+    scale: 0.6;
+    margin-left: -10px;
+  }
+}

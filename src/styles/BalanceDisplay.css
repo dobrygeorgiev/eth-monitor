@@ -1,0 +1,143 @@
+.balance-display {
+    max-width: 500px;
+    margin: 0 auto;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .balance-card {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid #333;
+  }
+  
+  .main-balance {
+    font-size: 36px;
+    margin: 0;
+    font-weight: 600;
+    color: #4bb2ed;
+  }
+  
+  .secondary-balance {
+    color: #aaa;
+    margin: 8px 0 24px;
+    font-size: 16px;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .action-button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .wrap-button {
+    /* background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); */
+    background: linear-gradient(90deg, #347cd4 0%, #2c54c4 100%);
+    color: #fff;
+    transition: 200ms;
+  }
+  .wrap-button:hover
+  {
+    background: linear-gradient(90deg, #2c74cc 0%, #244cbc 100%);
+    transform: translateX(0) translateY(-3%);
+  }
+  
+  .swap-button {
+    /* background: linear-gradient(90deg, #a6c0fe 0%, #f68084 100%); */
+    background: linear-gradient(90deg, #347cd4 0%, #2c54c4 100%);
+    color: #fff;
+  }
+
+  .swap-button:hover
+  {
+    background: linear-gradient(90deg, #2c74cc 0%, #244cbc 100%);
+    transform: translateX(0) translateY(-3%);
+  }
+  
+  .swap-button.disabled {
+    background: #333;
+    color: #666;
+    cursor: not-allowed;
+  }
+  
+  .tokens-section {
+    background: #1e1e1e;
+    border-radius: 16px;
+    padding: 20px;
+  }
+  
+  .section-title {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #aaa;
+  }
+  
+  .tokens-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  
+  .token-card {
+    background: #2a2a2a;
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  .token-name {
+    display: block;
+    color: #aaa;
+    font-size: 14px;
+  }
+  
+  .token-amount {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .input-group input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #2a2a2a;
+    color: #fff;
+  }
+  
+  .input-group button {
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .warning-message {
+    color: #ff6b6b;
+    text-align: center;
+    margin-top: 16px;
+  }

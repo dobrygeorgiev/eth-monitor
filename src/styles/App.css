@@ -1,0 +1,264 @@
+.app {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  /* background-color: #e6e6f3; */
+  background-color: rgb(33, 36, 40);
+  color: #4bb2ed;
+
+}
+body
+{
+  /* background-color: #e6e6f3; */
+  background-color: rgb(33, 36, 40);
+}
+.connection-section {
+  margin: 20px 0;
+  padding: 15px;
+  /* background: #f5f5f5; */
+  background: #8f96bf1a;
+  border-radius: 8px;
+}
+.header-container
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nexo-logo {
+  width: 150px;
+  height: auto;
+}
+/* .connect-button {
+  padding: 10px 15px;
+  background: #0f8e0b;
+  border: 1px solid;
+  transition: 200ms;
+  color: white;
+  border-radius: 4px;
+  border-color: transparent;
+  font-weight: bold;
+}
+
+.connect-button:hover {
+  background: transparent;
+  color: #0f8e0b;
+  cursor: pointer;
+  border-color: #0f8e0b;
+}
+
+.disconnect-button {
+  padding: 10px 15px;
+  background: #ff3860;
+  border: 1px solid;
+  transition: 200ms;
+  color: white;
+  border-radius: 4px;
+  border-color: transparent;
+  font-weight: bold;
+}
+.disconnect-button:hover {
+  background-color: transparent;
+  border-color: #ff3860;
+  color: #ff3860;
+  cursor: pointer;
+} */
+
+.connection-info {
+  margin-top: 10px;
+  display: flex;
+}
+
+.balance-section, .action-section {
+  padding-top: 20px;
+  margin: 20px 0;
+  /* background: #f9f9f9; */
+  background-color: #8f96bf1a;
+  border-radius: 8px;
+}
+
+.action-section {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+}
+
+.wrap-section {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.wrap-section input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  flex-grow: 1;
+}
+.metamask-logo
+{
+  max-width: 40px;
+  height: auto;
+  margin-top: 5px;
+}
+
+.bonus-button {
+  margin-top: 10px;
+  background: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.network-warning {
+  color: #ff3860;
+  font-weight: bold;
+}
+
+.disconnected-message {
+  text-align: center;
+  margin: 40px 0;
+  color: #666;
+}
+.supported-networks {
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
+.supported-networks ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 5px;
+}
+
+.supported-networks li {
+  padding: 3px 0;
+}
+.oneinch-widget-container {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.connection-info-item
+{
+  margin: auto;
+}
+.tokens-panel
+{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+}
+.token-container
+{
+  /* margin: auto; */
+  min-height: 60px;
+  background-color: transparent;
+  transition: 100ms;
+  padding-left: 15px;
+  align-content: center;
+}
+.token-container:hover
+{
+  /* margin: auto; */
+  min-height: 60px;
+  background-color: #696f8f1a;
+  cursor: pointer;
+}
+.token-card:hover
+{
+  cursor: pointer;
+}
+.balances-header
+{
+  padding-left: 15px;
+  padding-top: 25px;
+}
+.main-balance-header
+{
+  text-align: center;
+}
+.weth-price-header
+{
+  text-align: center;
+}
+
+.swap-section {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.swap-section input {
+  padding: 8px;
+  margin-right: 10px;
+  width: 200px;
+  border: 1px solid #ddd;
+}
+
+/* Tooltip container - required */
+[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Tooltip text - the magic happens here */
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  
+  /* Visual styling */
+  background: #2a2a2a;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  
+  /* Animation setup - initially hidden */
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  
+  /* Optional glass effect */
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Animation trigger */
+[data-tooltip]:hover::after {
+  opacity: 1;
+  transform: translateX(-65%) translateY(-30%);
+  transition-delay: 0.1s;
+}
+
+/* For disabled buttons */
+.swap-button.disabled {
+  pointer-events: auto;
+}
+
+/* Disabled button fix */
+.action-button.disabled {
+  pointer-events: auto;
+  cursor: not-allowed;
+}
+
+/* Ensure disabled buttons still show tooltips */
+.action-button.disabled {
+  pointer-events: auto;
+  cursor: not-allowed;
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .oneinch-widget-container {
+    height: 400px !important;
+  }
+}
